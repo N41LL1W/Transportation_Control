@@ -6,6 +6,6 @@ con = lite.connect('dados.db')
 
 # Criando tabela
 with con:
-    cur=con.cursor()
-    cur.execute("CREATE TABLE kmControl(id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT, local TEXT, descricao TEXT, marca TEXT, data_da_compra DATE, valor_da_compra DECIMAL, serie TEXT, imagem TEXT)"
+    cur = con.cursor()
+    cur.execute("CREATE TABLE kmControl(id INTEGER PRIMARY KEY AUTOINCREMENT, data DATE, calculo NUMBER, kmInicial NUMBER, kmFinal NUMBER, kmMorto NUMBER, kmRodado INT, peso DECIMAL, entCol INT, dissel DECIMAL, ganhos DECIMAL, gastos DECIMAL, manutencao DECIMAL, saldo DECIMAL, serie TEXT, imagem TEXT)")
     
