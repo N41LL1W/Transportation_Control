@@ -2,6 +2,8 @@ from tkinter import *
 from tkinter import messagebox
 from tkinter import ttk
 
+from cgitb import text
+
 from tkcalendar import DateEntry  # Importando o calendario
 
 from view import *  # Importando os View
@@ -72,7 +74,7 @@ def inserir():
     lista = [data, calculo, kmInicial, kmFinal, kmMorto, kmRodado, peso, entCol, disel, manutencao, ganhos, gastos,
              saldo]
 
-    if kmInicial == '':
+    if kmInicial=='':
         messagebox.showerror('Erro', 'O nome não pode ser vazio')
     else:
         inserir_info(lista)

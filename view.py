@@ -5,12 +5,6 @@ import sqlite3 as lite
 con = lite.connect('dados.dp')
 
 
-# CRUD
-# Creatu = Inserir / Criar
-# Ready = Acessar / Mostrar
-# Update = Atualizar
-# DELETE = Deletar / Apagar
-
 # Inserir dados
 def inserir_info(i):
     with con:
@@ -26,7 +20,7 @@ def mostrar_info():
     with con:
         cur = con.cursor()
         query = "SELECT * FROM kmControl"
-        cur.execute(query, lista)
+        cur.execute(query)
         info = cur.fetchall()
 
         for i in info:
